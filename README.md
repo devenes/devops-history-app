@@ -11,5 +11,3 @@ After installing all dependencies, run the app by entering its folder and typing
 `$ python routes.py`
 
 # my-flask-app
-
-# my-flask-app

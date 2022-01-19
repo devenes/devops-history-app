@@ -20,46 +20,47 @@
   <li><a href="{{ url_for('index') }}">What is DevOps? </a></li>
 </ul>
 
+<h3>What is the Twelve-Factor App Methodology?</h3>
 <p>
-  In Chinese myth and culture, the tiger is one of the 12 animals of the Chinese
-  zodiac. In Chinese art, the tiger is depicted as an earth symbol and equal
-  rival of the Chinese dragon – the two representing matter and spirit
-  respectively. The Southern Chinese martial art Hung Ga is based on the
-  movements of the tiger and the crane. In Imperial China, a tiger was the
-  personification of war and often represented the highest army general (or
-  present day defense secretary), while the emperor and empress were represented
-  by a dragon and phoenix, respectively. The White Tiger (Chinese: 白虎; pinyin:
-  Bái Hǔ) is one of the Four Symbols of the Chinese constellations. It is
-  sometimes called the White Tiger of the West (西方白虎), and it represents the
-  west and the autumn season.
+  The Twelve-Factor App Methodology is suggested by developers for smoothly
+  working and delivering Software as a Service (SaaS) Applications or Web Apps
+  with a focus on Microservices. For that reason, for purposes of this
+  discussion, I will be using Service and Application interchangeably.
 </p>
 
 <p>
-  The tiger's tail appears in stories from countries including China and Korea,
-  it being generally inadvisable to grasp a tiger by the tail.
+  At Hashmap, we do our best to follow the methodology as much as possible, but
+  reality dictates that sometimes we must deviate a bit due to limitations that
+  are encountered. Regardless, it’s always a best practice to keep the
+  Twelve-Factors top of mind while building SaaS applications and continue to
+  reinforce why they matter.
+</p>
+
+<h3>Codebase</h3>
+<p>
+  An application codebase should always be tracked by a Version Control System
+  (VCS). Widely popular in the development world is Git, and in today’s world
+  you really can’t find a development team who are not using VCS. It provides
+  substantial benefits such as code tracking and code versioning while also
+  easing the collaboration of a development team working on the same
+  application.
 </p>
 
 <p>
-  In Buddhism, the tiger is one of the Three Senseless Creatures, symbolising
-  anger, with the monkey representing greed and the deer lovesickness. The
-  Tungusic peoples considered the Siberian tiger a near-deity and often referred
-  to it as "Grandfather" or "Old man". The Udege and Nanai called it "Amba". The
-  Manchu considered the Siberian tiger as Hu Lin, the king.[69] In Hinduism, the
-  god Shiva wears and sits on tiger skin.[197] The ten-armed warrior goddess
-  Durga rides the tigress (or lioness) Damon into battle. In southern India the
-  god Ayyappan was associated with a tiger.
-</p>
-
-<p>
-  The weretiger replaces the werewolf in shapeshifting folklore in Asia; in
-  India they were evil sorcerers, while in Indonesia and Malaysia they were
-  somewhat more benign. As per Hindu epic Mahabharata, tiger is more fiercer and
-  ruthless than lion.
+  Code should not be shared between applications — you can’t add dependencies of
+  deployable services (think Spring Boot or Play applications) on each other.
+  So, if there is common code you want to use across applications, create a repo
+  for that code as a library, publish it to Maven, and integrate using Maven,
+  sbt, Gradle or any other tool you prefer.
 </p>
 
 <p>
   (Text from
-  <a href="https://en.wikipedia.org/wiki/Tiger" target="_blank">Wikipedia</a>)
+  <a
+    href="https://medium.com/hashmapinc/how-i-use-the-twelve-factor-app-methodology-for-building-saas-applications-with-java-scala-4cdb668cc908"
+    target="_blank"
+    >Medium</a
+  >)
 </p>
 
 {% endblock %}

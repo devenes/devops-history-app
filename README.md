@@ -1,4 +1,4 @@
-# My DevOps History App
+# DevOps History App
 
 This small repo demonstrates a proper file structure for a Flask app. The folders named _static_ and _templates_ are required.
 

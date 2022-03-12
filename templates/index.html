@@ -1,14 +1,26 @@
 {% extends 'base.html' %} {% block body %}
 
+<!-- Make video play enable on Chrome and Safari ~Enes -->
+<script>
+    document.getElementById('vid').play();
+</script>
+
 <!-- to be filled by the Python script -->
 <h1>{{ the_title }}</h1>
 
 <!-- note how items from the "static" folder are linked -->
 
-<img
+<!-- <img
   alt="Photo: DevOps"
   src="{{ url_for('static', filename='images/devops.jpg') }}"
-/>
+/> -->
+
+<!-- add video ~Enes-->
+<video width="600" height="480" autoplay muted loop>
+  <source src="{{ url_for('static', filename='videos/devops.mp4') }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 <p class="credit">
   Photo by Grzegorz Żuk (DevOps animated illustration)
   <a
